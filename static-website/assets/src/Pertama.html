@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Own first website</title>
+    <style>
+        .container {
+            display: flex; /* Menggunakan display flex untuk mengatur tata letak */
+            align-items: center; /* Mengatur teks dan gambar menjadi sejajar vertikal */
+        }
+        .gambar {
+            width: 200px; /* Mengatur lebar gambar */
+            height: auto; /* Mengatur tinggi gambar secara otomatis sesuai dengan proporsi aslinya */
+            margin-right: 20px; /* Memberikan margin di kanan gambar untuk memberi ruang antara gambar dan teks */
+        }
+        
+        /* Warna Background dari website tersebut setting disini */
+        body {
+            background-color: #fff2d3; /* Gunakan kode warna, dalam contoh ini abu-abu */
+            margin: 0; /* Hilangkan margin default */
+            padding: 0; /* Hilangkan padding default */
+        }
+                /* Menargetkan elemen <select> */
+        select {
+            /* Memberikan warna latar belakang */
+            background-color: #c300ff;
+            /* Menetapkan warna teks */
+            color: #333;
+            /* Mengatur padding dan margin */
+            padding: 5px;
+            margin: 5px 0;
+            /* Mengatur border dan radius sudut */
+            border: 1px solid #000000;
+            border-radius: 5px;
+            /* Mengatur kursor saat di atas dropdown */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1> Berikut ini merupakan Heading pertama dari website saya</h1>
+    <p>Selamat datang, berikut ini merupakan sebuah website yang pertama kali saya buat. merupakan website belajar yang akan digunakan dalam kehidupan sehari-hari banyak nya akses masuk, foto video yang akan ada didalam website ini.</p>
+    <h2> Berikut Heading ke dua</h2>
+    <h3> ini adalah Heading ke 3</h3>
+    <p> Heading berfungsi untuk menciptakan sebuah judul dari kategori website tersebut, oleh karena itu harus diperhatikan sub-bab untuk heading tersebut</p>
+
+    <div class="container">
+    <img src= "https://th.bing.com/th/id/OIP.izOOxDyHFwihHcQcKIExmQAAAA?rs=1&pid=ImgDetMain" width="30" height="30">
+    <p>Silahkan klik link pada text berikut <a href="https://www.instagram.com/">situs website</a> Instagram Kami</p>
+    </div>
+
+    <h1>Berikut ini adalah video yang akan dimasukan kedalam html tersebut</h1>
+    <!-- Video YouTube -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ll1lephM_5w" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/iuxjoXkW57k" frameborder="0" allowfullscreen></iframe>
+
+    <h2 style="color: blue;">Memasukan lagu</h2>
+    <!-- Widget Embed Spotify -->
+    <iframe src="https://open.spotify.com/embed/track/6JusI70TeT9M2O1MXyXRRv" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    <iframe src="https://open.spotify.com/embed/track/2dTIJVE0stqTvrhbpf7fFw?si=5af9c8d2ed5441f0" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    <iframe src="https://open.spotify.com/embed/track/3FRwkq2qSm1zeI828c9cVe?si=c818e1332ff4416f" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+    <h1>Menambahkan button pada HTML ato website</h1>
+    <button>
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+    </button>
+
+    <button>
+        <a href="https://chatgpt.com" target="_blank">Chat Open AI</a>
+    </button>
+    <button>
+        <a href="https://spotify.com" target="_blank">Spotify Web Player</a>
+    </button>
+
+<br>
+<br>
+
+    <!-- Dropdown box untuk tanggal -->
+<select name="tanggal">
+    <option value="">Tanggal</option>
+    <!-- Menghasilkan opsi tanggal dari 1 hingga 31 -->
+    <!-- Anda bisa menggunakan skrip JavaScript atau bahasa server-side untuk menghasilkan opsi secara dinamis -->
+    <!-- Berikut hanya contoh statis -->
+    <script>
+        for (var i = 1; i <= 31; i++) {
+            document.write("<option value='" + i + "'>" + i + "</option>");
+        }
+    </script>
+</select>
+
+<!-- Dropdown box untuk bulan -->
+<select name="bulan">
+    <option value="">Bulan</option>
+    <!-- Menghasilkan opsi bulan dari Januari hingga Desember -->
+    <!-- Anda bisa menggunakan skrip JavaScript atau bahasa server-side untuk menghasilkan opsi secara dinamis -->
+    <!-- Berikut hanya contoh statis -->
+    <option value="1">Januari</option>
+    <option value="2">Februari</option>
+    <option value="3">Maret</option>
+    <option value="4">April</option>
+    <option value="5">Mei</option>
+    <option value="6">Juni</option>
+    <option value="7">Juli</option>
+    <option value="8">Agustus</option>
+    <option value="9">September</option>
+    <option value="10">Oktober</option>
+    <option value="11">November</option>
+    <option value="12">Desember</option>
+</select>
+
+<!-- Dropdown box untuk tahun -->
+<select name="tahun">
+    <option value="">Tahun</option>
+    <!-- Menghasilkan opsi tahun dari tahun sekarang hingga 100 tahun ke belakang -->
+    <!-- Anda bisa menggunakan skrip JavaScript atau bahasa server-side untuk menghasilkan opsi secara dinamis -->
+    <!-- Berikut hanya contoh statis -->
+    <script>
+        var tahunSekarang = new Date().getFullYear();
+        for (var i = tahunSekarang; i >= tahunSekarang - 100; i--) {
+            document.write("<option value='" + i + "'>" + i + "</option>");
+        }
+    </script>
+</select>
+
+</body>
+</html>
